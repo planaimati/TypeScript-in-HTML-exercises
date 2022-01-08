@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer {
+  height: 430px;
+  width: 650px;
+  position: relative;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.zoomImageContainer {
+  height: 550px;
+  width: 450px;
+  border: 1px solid grey;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  overflow: hidden;
+}
+
+.newImage {
+  position: absolute;
+  height: 1000px;
+  width: 1000px;
+  top: 0;
+  left: 0;
+}
