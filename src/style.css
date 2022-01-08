@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 200vh;
+  width: 100%;
+}
+
+.sticky__menu {
+  position: fixed;
+  background-color: royalblue;
+  transition: 0.3s;
+}
+
+.sticky__menu__scrolling {
+  width: 100px;
+  height: 50px;
+}
+
+.sticky__menu__notScrolling {
+  width: 100%;
+  height: 80px;
+}
