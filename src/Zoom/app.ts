@@ -1,10 +1,12 @@
 const imgUrl =
   "https://cdn.pixabay.com/photo/2016/06/20/21/46/sport-shoes-1470061_960_720.jpg";
 
-const imageContainer = document.querySelector(".imageContainer");
+const imageContainer: HTMLElement = document.querySelector(
+  ".imageContainer"
+) as HTMLDivElement;
 const container = document.querySelector(".container");
 
-const handleMouseOver = (event: Event) => {
+const handleMouseOver = () => {
   const newImageContainer = document.createElement("div");
   const newImage = document.createElement("img");
   newImage.src = imgUrl;
@@ -19,17 +21,22 @@ const handleMouseOut = () => {
   child?.remove();
 };
 
-const handleMouseMove = (event: Event) => {
-  const newImage: HTMLLIElement = document.querySelector(
+const handleMouseMove = (event: MouseEvent) => {
+  const newImage: HTMLElement = document.querySelector(
     ".newImage"
   ) as HTMLImageElement;
 
-  const XYZ = imageContainer?.getBoundingClientRect();
+  const XYZ = imageContainer?.getBoundingClientRect() as DOMRect;
 
-  //newImage.style.top =
-
-  console.log(event.clientX - XYZ.left);
-  newImage.style.left = `-${event.clientX - XYZ.left}px`;
+  if (
+    event.clientX - XYZ.left > imageContainer.offsetWidth - 100 &&
+    event.clientX - XYZ.top > imageContainer.offsetHeight - 100
+  ) {
+    return;
+  } else {
+    newImage.style.left = `-${event.clientX - XYZ.left}px`;
+    newImage.style.top = `-${event.clientY - XYZ.top}px`;
+  }
 
   //console.log(XYZ.left);
 };
