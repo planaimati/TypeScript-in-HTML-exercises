@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/Zoom/index.html",
-    "build": "parcel build src/Zoom/index.html"
+    "dev": "parcel src/TypingEffects/index.html",
+    "build": "parcel build src/TypingEffects/index.html"
   },
   "author": "",
   "license": "ISC",
