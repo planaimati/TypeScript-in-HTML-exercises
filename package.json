@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/TypingEffects/index.html",
-    "build": "parcel build src/TypingEffects/index.html"
+    "dev": "parcel src/DynamicForm/index.html",
+    "build": "parcel build src/DynamicForm/index.html"
   },
   "author": "",
   "license": "ISC",
